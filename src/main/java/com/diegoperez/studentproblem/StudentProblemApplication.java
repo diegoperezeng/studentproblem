@@ -5,6 +5,7 @@ import com.diegoperez.studentproblem.model.Problem;
 import com.diegoperez.studentproblem.model.ProblemItem;
 import com.diegoperez.studentproblem.model.Student;
 import com.diegoperez.studentproblem.model.StudentSkill;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.diegoperez.studentproblem.view.InterfaceFillSimulation;
@@ -22,9 +23,12 @@ public class StudentProblemApplication {
 
 
 		//ID of the student for running the program:
-		Integer writeStudentId = 1;
-		String writeProblemName = "prob2";
+		Integer writeStudentId = 2;
+		//Score Limit for running the program:
 		Double limitScore = 0.95;
+
+		String writeProblemName = ProblemController.nextProblemName(studentSkillList, problemItemList, writeStudentId , limitScore );
+
 
 		System.out.println("");
 		System.out.println("");
@@ -39,16 +43,9 @@ public class StudentProblemApplication {
 		System.out.println(studentSkillList.showStudentSkillLesser(writeStudentId,limitScore));
 		System.out.println(problemList.showProblem(writeProblemName));
 		System.out.println(problemItemList.showProblemItem(writeProblemName));
-
-		ProblemController problemController = new ProblemController();
-
 		System.out.println("***");
 		System.out.println("***");
 		System.out.println("***");
-		System.out.println(problemController.nextProblemName(writeStudentId , limitScore ));
-
 	}
-
-
 }
 
