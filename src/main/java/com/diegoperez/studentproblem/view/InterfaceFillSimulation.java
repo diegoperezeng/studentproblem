@@ -5,7 +5,7 @@ import com.diegoperez.studentproblem.model.ProblemItem;
 import com.diegoperez.studentproblem.model.Student;
 import com.diegoperez.studentproblem.model.StudentSkill;
 
-//Since there's no interface, we use this class to fill the DS
+//Since there's no interface, we use this class to fill the DS as a mock
 
 public class InterfaceFillSimulation {
 

@@ -6,13 +6,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
-
 
 public class ProblemController {
 
 
-
+    //Method to show a random problem based on the skills under the limit score for a given student id
     public static String nextProblemName(@NotNull StudentSkill studentSkill, @NotNull ProblemItem problemItemList, Integer idStudent, Double limitScore){
 
         ArrayList<String> listProblemsCache = new ArrayList<String>();
@@ -27,11 +25,7 @@ public class ProblemController {
 
         Collections.shuffle(listProblemsCache);
 
-
-
         return listProblemsCache.get(0);
 
     }
-
-
 }

@@ -23,11 +23,13 @@ public class Problem {
     }
     private ArrayList<Problem> problemList = new ArrayList<>();
 
+    //Method to save a problem
     public void saveProblem(String problemName, String problemHeader){
         Problem problem = new Problem(problemName, problemHeader);
         if(problemName !=null && problemHeader !=null){ problemList.add(problem);}
     }
 
+    //Method to show a problem that are already in DB
     public ArrayList<Problem> showProblem(String problemName){
         ArrayList<Problem> filteredProblem = (ArrayList<Problem>) problemList.stream().filter(item -> item.problemName.equals(problemName)).collect(Collectors.toList());
         return filteredProblem;

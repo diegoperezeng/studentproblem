@@ -24,11 +24,14 @@ public class Student {
     }
     private ArrayList<Student> studentList = new ArrayList<>();
 
+    //Method to save a student
     public void saveStudent(Integer idStudent, String studentName){
         Student student = new Student(idStudent, studentName);
         if(studentName !=null && idStudent !=null){ studentList.add(student);}
     }
 
+
+    //Method to show a student given an ID
     public ArrayList<Student> showStudent(Integer idStudent){
         ArrayList<Student> filteredStudent = (ArrayList<Student>) studentList.stream().filter(item -> item.idStudent.equals(idStudent)).collect(Collectors.toList());
         return filteredStudent;

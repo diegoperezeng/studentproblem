@@ -26,7 +26,7 @@ public class StudentProblemApplication {
 		Integer writeStudentId = 2;
 		//Score Limit for running the program:
 		Double limitScore = 0.95;
-
+		//Pick a random problem that contains a skill that has to be trained by the student, due to the score limit:
 		String writeProblemName = ProblemController.nextProblemName(studentSkillList, problemItemList, writeStudentId , limitScore );
 
 
@@ -35,14 +35,23 @@ public class StudentProblemApplication {
 		System.out.println("***");
 		System.out.println("***");
 		System.out.println("***");
+
+		//Showing the student profile data
 		System.out.println(studentList.showStudent(writeStudentId));
+		//Showing the student's Skills profile data
 		System.out.println(studentSkillList.showStudentSkill(writeStudentId));
+
 		System.out.println("***");
 		System.out.println("***");
 		System.out.println("***");
+
+		//Showing the student's skills that are under the score limitation
 		System.out.println(studentSkillList.showStudentSkillLesser(writeStudentId,limitScore));
+		//Showing the random problem name and header
 		System.out.println(problemList.showProblem(writeProblemName));
+		//Showing the listed problem items
 		System.out.println(problemItemList.showProblemItem(writeProblemName));
+
 		System.out.println("***");
 		System.out.println("***");
 		System.out.println("***");
