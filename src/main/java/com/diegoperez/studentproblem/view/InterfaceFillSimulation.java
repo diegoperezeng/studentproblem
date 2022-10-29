@@ -1,5 +1,6 @@
 package com.diegoperez.studentproblem.view;
 
+import com.diegoperez.studentproblem.controller.StudentController;
 import com.diegoperez.studentproblem.model.Problem;
 import com.diegoperez.studentproblem.model.ProblemItem;
 import com.diegoperez.studentproblem.model.Student;
@@ -12,20 +13,18 @@ public class InterfaceFillSimulation {
     public static Student FillStudentData() {
 
         //Initiate students instance
-        Student studentList = new Student();
+        StudentController studentController = new StudentController();
 
         //Adding the StudentNumber_1:
-        studentList.saveStudent(1,"Anakin");
+        studentController.saveStudent(1,"Anakin");
 
         //Adding the StudentNumber_2:
-        studentList.saveStudent(2,"Ahsoka");
-
+        studentController.saveStudent(2,"Ahsoka");
 
         //Adding the StudentNumber_3:
-        studentList.saveStudent(3,"Obi-Wan");
+        studentController.saveStudent(3,"Obi-Wan");
 
-        return studentList;
-
+        return studentController;
     }
 
     public static StudentSkill FillSkillData() {
